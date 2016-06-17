@@ -13,6 +13,7 @@
 		49935DBE1D11AD2B00F830A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49935DBD1D11AD2B00F830A2 /* Assets.xcassets */; };
 		49935DC11D11AD2B00F830A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49935DBF1D11AD2B00F830A2 /* LaunchScreen.storyboard */; };
 		49935DD71D11D8DB00F830A2 /* CombinationLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49935DD61D11D8DB00F830A2 /* CombinationLock.swift */; };
+		49935DD91D141D9E00F830A2 /* CombinationLockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49935DD81D141D9E00F830A2 /* CombinationLockTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		49935DC71D11AD2B00F830A2 /* CombinationLockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombinationLockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49935DCD1D11AD2B00F830A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49935DD61D11D8DB00F830A2 /* CombinationLock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinationLock.swift; sourceTree = "<group>"; };
+		49935DD81D141D9E00F830A2 /* CombinationLockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinationLockTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		49935DCA1D11AD2B00F830A2 /* CombinationLockTests */ = {
 			isa = PBXGroup;
 			children = (
+				49935DD81D141D9E00F830A2 /* CombinationLockTests.swift */,
 				49935DCD1D11AD2B00F830A2 /* Info.plist */,
 			);
 			path = CombinationLockTests;
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49935DD91D141D9E00F830A2 /* CombinationLockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,10 +353,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CombinationLockTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.intrepid.CombinationLockTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CombinationLock.app/CombinationLock";
 			};
 			name = Debug;
@@ -361,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CombinationLockTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.intrepid.CombinationLockTests;
