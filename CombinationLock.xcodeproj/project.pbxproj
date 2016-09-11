@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4926CE971D85E86B0078C6BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49935DB81D11AD2B00F830A2 /* ViewController.swift */; };
 		49935DB71D11AD2B00F830A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49935DB61D11AD2B00F830A2 /* AppDelegate.swift */; };
 		49935DB91D11AD2B00F830A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49935DB81D11AD2B00F830A2 /* ViewController.swift */; };
 		49935DBC1D11AD2B00F830A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49935DBA1D11AD2B00F830A2 /* Main.storyboard */; };
 		49935DBE1D11AD2B00F830A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49935DBD1D11AD2B00F830A2 /* Assets.xcassets */; };
 		49935DC11D11AD2B00F830A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49935DBF1D11AD2B00F830A2 /* LaunchScreen.storyboard */; };
-		49935DD71D11D8DB00F830A2 /* CombinationLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49935DD61D11D8DB00F830A2 /* CombinationLock.swift */; };
 		49935DD91D141D9E00F830A2 /* CombinationLockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49935DD81D141D9E00F830A2 /* CombinationLockTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +36,6 @@
 		49935DC21D11AD2B00F830A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49935DC71D11AD2B00F830A2 /* CombinationLockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombinationLockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49935DCD1D11AD2B00F830A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49935DD61D11D8DB00F830A2 /* CombinationLock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinationLock.swift; sourceTree = "<group>"; };
 		49935DD81D141D9E00F830A2 /* CombinationLockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinationLockTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,7 +80,6 @@
 			children = (
 				49935DB61D11AD2B00F830A2 /* AppDelegate.swift */,
 				49935DB81D11AD2B00F830A2 /* ViewController.swift */,
-				49935DD61D11D8DB00F830A2 /* CombinationLock.swift */,
 				49935DBA1D11AD2B00F830A2 /* Main.storyboard */,
 				49935DBD1D11AD2B00F830A2 /* Assets.xcassets */,
 				49935DBF1D11AD2B00F830A2 /* LaunchScreen.storyboard */,
@@ -200,7 +198,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49935DD71D11D8DB00F830A2 /* CombinationLock.swift in Sources */,
 				49935DB91D11AD2B00F830A2 /* ViewController.swift in Sources */,
 				49935DB71D11AD2B00F830A2 /* AppDelegate.swift in Sources */,
 			);
@@ -210,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4926CE971D85E86B0078C6BE /* ViewController.swift in Sources */,
 				49935DD91D141D9E00F830A2 /* CombinationLockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +393,7 @@
 				49935DD21D11AD2B00F830A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49935DD31D11AD2B00F830A2 /* Build configuration list for PBXNativeTarget "CombinationLockTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +402,7 @@
 				49935DD51D11AD2B00F830A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

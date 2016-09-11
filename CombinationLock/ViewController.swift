@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private let combination = "123"
+    private var enteredCombination = ""
+
     private let lockedColor = UIColor.redColor()
     private let lockedText = "LOCKED"
     
@@ -20,36 +23,44 @@ class ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
-    
-    private let lock = CombinationLock(combination: "123")
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateLockStatus()
-    }
-    
-    func updateLockStatus() {
-        if lock.locked {
-            lockStatusIndicatorLabel.backgroundColor = lockedColor
-            lockStatusIndicatorLabel.text = lockedText
-        } else {
-            lockStatusIndicatorLabel.backgroundColor = unlockedColor
-            lockStatusIndicatorLabel.text = unlockedText
-        }
+        updateLockState()
     }
     
     @IBAction func digitButton1Tapped(digitButton: UIButton) {
-        lock.enterDigit1()
-        updateLockStatus()
+        updateEnteredCombination(String(1))
+        updateLockState()
     }
     
     @IBAction func digitButton2Tapped(digitButton: UIButton) {
-        lock.enterDigit2()
-        updateLockStatus()
+        updateEnteredCombination(String(2))
+        updateLockState()
     }
     
     @IBAction func digitButton3Tapped(digitButton: UIButton) {
-        lock.enterDigit3()
-        updateLockStatus()
+        updateEnteredCombination(String(3))
+        updateLockState()
     }
+    
+    private func updateEnteredCombination(nextDigitString: String) {
+        let newCombination = enteredCombination + nextDigitString
+        if combination.hasPrefix(newCombination) {
+            enteredCombination = newCombination
+        } else {
+            enteredCombination = nextDigitString
+        }
+    }
+    
+    private func updateLockState() {
+        if enteredCombination == combination {
+            lockStatusIndicatorLabel.backgroundColor = unlockedColor
+            lockStatusIndicatorLabel.text = unlockedText
+        } else {
+            lockStatusIndicatorLabel.backgroundColor = lockedColor
+            lockStatusIndicatorLabel.text = lockedText
+        }
+    }
+
 }
