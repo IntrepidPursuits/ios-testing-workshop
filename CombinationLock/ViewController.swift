@@ -10,15 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let combination = "123"
-    private var enteredCombination = ""
-
-    private let lockedColor = UIColor.red
-    private let lockedText = "LOCKED"
+    let viewModel = ViewModel()
     
-    private let unlockedColor = UIColor.green
-    private let unlockedText = "UNLOCKED"
-
     @IBOutlet weak var lockStatusIndicatorLabel: UILabel!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -30,37 +23,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func digitButton1Tapped(_ digitButton: UIButton) {
-        updateEnteredCombination(String(1))
+        viewModel.digit1Entered()
         updateLockState()
     }
     
     @IBAction func digitButton2Tapped(_ digitButton: UIButton) {
-        updateEnteredCombination(String(2))
+        viewModel.digit2Entered()
         updateLockState()
     }
     
     @IBAction func digitButton3Tapped(_ digitButton: UIButton) {
-        updateEnteredCombination(String(3))
+        viewModel.digit3Entered()
         updateLockState()
     }
     
-    private func updateEnteredCombination(_ nextDigitString: String) {
-        let newCombination = enteredCombination + nextDigitString
-        if combination.hasPrefix(newCombination) {
-            enteredCombination = newCombination
-        } else {
-            enteredCombination = nextDigitString
-        }
-    }
-    
     private func updateLockState() {
-        if enteredCombination == combination {
-            lockStatusIndicatorLabel.backgroundColor = unlockedColor
-            lockStatusIndicatorLabel.text = unlockedText
-        } else {
-            lockStatusIndicatorLabel.backgroundColor = lockedColor
-            lockStatusIndicatorLabel.text = lockedText
-        }
+        lockStatusIndicatorLabel.backgroundColor = viewModel.lockBackgroundColor
+        lockStatusIndicatorLabel.text = viewModel.lockText
     }
 
 }
