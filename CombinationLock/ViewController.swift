@@ -13,10 +13,10 @@ class ViewController: UIViewController {
     private let combination = "123"
     private var enteredCombination = ""
 
-    private let lockedColor = UIColor.redColor()
+    private let lockedColor = UIColor.red
     private let lockedText = "LOCKED"
     
-    private let unlockedColor = UIColor.greenColor()
+    private let unlockedColor = UIColor.green
     private let unlockedText = "UNLOCKED"
 
     @IBOutlet weak var lockStatusIndicatorLabel: UILabel!
@@ -29,22 +29,22 @@ class ViewController: UIViewController {
         updateLockState()
     }
     
-    @IBAction func digitButton1Tapped(digitButton: UIButton) {
+    @IBAction func digitButton1Tapped(_ digitButton: UIButton) {
         updateEnteredCombination(String(1))
         updateLockState()
     }
     
-    @IBAction func digitButton2Tapped(digitButton: UIButton) {
+    @IBAction func digitButton2Tapped(_ digitButton: UIButton) {
         updateEnteredCombination(String(2))
         updateLockState()
     }
     
-    @IBAction func digitButton3Tapped(digitButton: UIButton) {
+    @IBAction func digitButton3Tapped(_ digitButton: UIButton) {
         updateEnteredCombination(String(3))
         updateLockState()
     }
     
-    private func updateEnteredCombination(nextDigitString: String) {
+    private func updateEnteredCombination(_ nextDigitString: String) {
         let newCombination = enteredCombination + nextDigitString
         if combination.hasPrefix(newCombination) {
             enteredCombination = newCombination
