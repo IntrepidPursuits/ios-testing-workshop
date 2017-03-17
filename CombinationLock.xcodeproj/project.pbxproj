@@ -14,10 +14,18 @@
 		49935DBE1D11AD2B00F830A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49935DBD1D11AD2B00F830A2 /* Assets.xcassets */; };
 		49935DC11D11AD2B00F830A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49935DBF1D11AD2B00F830A2 /* LaunchScreen.storyboard */; };
 		49935DD91D141D9E00F830A2 /* CombinationLockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49935DD81D141D9E00F830A2 /* CombinationLockTests.swift */; };
+		9D1C2C7D1E7C726700D8727D /* CombinationLockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C2C7C1E7C726700D8727D /* CombinationLockUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		49935DC81D11AD2B00F830A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49935DAB1D11AD2B00F830A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49935DB21D11AD2B00F830A2;
+			remoteInfo = CombinationLock;
+		};
+		9D1C2C7F1E7C726700D8727D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 49935DAB1D11AD2B00F830A2 /* Project object */;
 			proxyType = 1;
@@ -37,6 +45,9 @@
 		49935DC71D11AD2B00F830A2 /* CombinationLockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombinationLockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49935DCD1D11AD2B00F830A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49935DD81D141D9E00F830A2 /* CombinationLockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinationLockTests.swift; sourceTree = "<group>"; };
+		9D1C2C7A1E7C726700D8727D /* CombinationLockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombinationLockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D1C2C7C1E7C726700D8727D /* CombinationLockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationLockUITests.swift; sourceTree = "<group>"; };
+		9D1C2C7E1E7C726700D8727D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +65,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9D1C2C771E7C726700D8727D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,6 +80,7 @@
 			children = (
 				49935DB51D11AD2B00F830A2 /* CombinationLock */,
 				49935DCA1D11AD2B00F830A2 /* CombinationLockTests */,
+				9D1C2C7B1E7C726700D8727D /* CombinationLockUITests */,
 				49935DB41D11AD2B00F830A2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +90,7 @@
 			children = (
 				49935DB31D11AD2B00F830A2 /* CombinationLock.app */,
 				49935DC71D11AD2B00F830A2 /* CombinationLockTests.xctest */,
+				9D1C2C7A1E7C726700D8727D /* CombinationLockUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +115,15 @@
 				49935DCD1D11AD2B00F830A2 /* Info.plist */,
 			);
 			path = CombinationLockTests;
+			sourceTree = "<group>";
+		};
+		9D1C2C7B1E7C726700D8727D /* CombinationLockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9D1C2C7C1E7C726700D8727D /* CombinationLockUITests.swift */,
+				9D1C2C7E1E7C726700D8727D /* Info.plist */,
+			);
+			path = CombinationLockUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,23 +164,47 @@
 			productReference = 49935DC71D11AD2B00F830A2 /* CombinationLockTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		9D1C2C791E7C726700D8727D /* CombinationLockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D1C2C811E7C726800D8727D /* Build configuration list for PBXNativeTarget "CombinationLockUITests" */;
+			buildPhases = (
+				9D1C2C761E7C726700D8727D /* Sources */,
+				9D1C2C771E7C726700D8727D /* Frameworks */,
+				9D1C2C781E7C726700D8727D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D1C2C801E7C726700D8727D /* PBXTargetDependency */,
+			);
+			name = CombinationLockUITests;
+			productName = CombinationLockUITests;
+			productReference = 9D1C2C7A1E7C726700D8727D /* CombinationLockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		49935DAB1D11AD2B00F830A2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Intrepid Pursuits";
 				TargetAttributes = {
 					49935DB21D11AD2B00F830A2 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 463M48269N;
 						LastSwiftMigration = 0800;
 					};
 					49935DC61D11AD2B00F830A2 = {
 						CreatedOnToolsVersion = 7.2;
 						LastSwiftMigration = 0800;
+						TestTargetID = 49935DB21D11AD2B00F830A2;
+					};
+					9D1C2C791E7C726700D8727D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 49935DB21D11AD2B00F830A2;
 					};
 				};
@@ -171,6 +224,7 @@
 			targets = (
 				49935DB21D11AD2B00F830A2 /* CombinationLock */,
 				49935DC61D11AD2B00F830A2 /* CombinationLockTests */,
+				9D1C2C791E7C726700D8727D /* CombinationLockUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +241,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		49935DC51D11AD2B00F830A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D1C2C781E7C726700D8727D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -214,6 +275,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9D1C2C761E7C726700D8727D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D1C2C7D1E7C726700D8727D /* CombinationLockUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -221,6 +290,11 @@
 			isa = PBXTargetDependency;
 			target = 49935DB21D11AD2B00F830A2 /* CombinationLock */;
 			targetProxy = 49935DC81D11AD2B00F830A2 /* PBXContainerItemProxy */;
+		};
+		9D1C2C801E7C726700D8727D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49935DB21D11AD2B00F830A2 /* CombinationLock */;
+			targetProxy = 9D1C2C7F1E7C726700D8727D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -336,7 +410,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 463M48269N;
 				INFOPLIST_FILE = CombinationLock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.intrepid.CombinationLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,7 +424,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 463M48269N;
 				INFOPLIST_FILE = CombinationLock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.intrepid.CombinationLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -385,6 +463,37 @@
 			};
 			name = Release;
 		};
+		9D1C2C821E7C726800D8727D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = CombinationLockUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lr.CombinationLockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CombinationLock;
+			};
+			name = Debug;
+		};
+		9D1C2C831E7C726800D8727D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = CombinationLockUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lr.CombinationLockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CombinationLock;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -414,6 +523,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		9D1C2C811E7C726800D8727D /* Build configuration list for PBXNativeTarget "CombinationLockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D1C2C821E7C726800D8727D /* Debug */,
+				9D1C2C831E7C726800D8727D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
